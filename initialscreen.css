@@ -1,10 +1,15 @@
 * {
     Box-sizing:  border-box;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 
 .headerbox {
     height: 720px;
+    background-image: url("adventure-alpine-background-355747.jpg");
+    width: 100%;
+    background-size: 100% 100%;
+
 }
 
 .applicationimages1, .applicationimages2, .descriptionbox {
@@ -25,14 +30,13 @@
     position: absolute;
     width: 100%;
     height: 50%;
-    margin-top: 50%;
+    margin-top: 30%;
     margin-bottom: 50%;
 
 
 }
 
 .applicationimages2, .applicationimages1 {
-    background-color: aqua;
 }
 
 .downlink {
@@ -44,6 +48,8 @@
     width: 100%;
     height: 60px;
     background-color: darkmagenta;
+    position: sticky;
+    top: 0;
 }
 
 .portcontainer {
