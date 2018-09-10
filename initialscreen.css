@@ -20,11 +20,20 @@
 
 }
 
+.logoleft {
+    width: 25%;
+    height: auto;
+    padding: 3%;
+}
+
 .descriptionbox {
     text-align: center;
     position: relative;
 
+
 }
+
+
 
 .descrip-holder {
     position: absolute;
@@ -36,7 +45,14 @@
 
 }
 
-.applicationimages2, .applicationimages1 {
+.name {
+    font-variant: small-caps;
+    font-size: 4vw;
+    border-bottom: 1%;
+    border-color: white;
+    border-bottom-style: solid;
+    border-radius: 10%;
+
 }
 
 .downlink {
