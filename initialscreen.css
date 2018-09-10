@@ -1,0 +1,20 @@
+* {
+    Box-sizing:  border-box;
+}
+
+
+.headerbox {
+    height: 720px;
+}
+
+.applicationimages1, .applicationimages2, .descriptionbox {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    margin: auto;
+
+}
+
+.applicationimages2, .applicationimages1 {
+    background-color: aqua;
+}
