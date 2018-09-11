@@ -86,7 +86,7 @@
 }
 
 .portcontainer {
-    height: 720px;
+    height: 150vh;
 }
 
 
@@ -133,4 +133,15 @@
     width: 50%;
     margin: 2.5% auto 0 auto;
     text-align: center;
+}
+
+.contactme {
+    width: 100%;
+    height: 720px;
+    background-color: powderblue;
+}
+
+.online {
+    height: 200px;
+    background-color: azure;
 }
