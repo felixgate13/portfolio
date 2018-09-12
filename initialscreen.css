@@ -7,109 +7,76 @@
 html {
     scroll-behavior: smooth;
 }
-
 body {
     background-color: #E5EBFF;
     margin: 0;
-
 }
-
 .headerbox {
     height: 100vh;
     background-image: url("beautiful-cold-dawn-547115.jpg");
     width: 100%;
     background-size: cover;
     background-position: center;
-
-
 }
-
 .applicationimages1, .applicationimages2, .descriptionbox {
     float: left;
     width: 33.33%;
     height: 100%;
     margin: auto;
-
 }
-
 .logoleft {
     width: 23%;
     height: auto;
     padding: 3%;
     float: left;
 }
-
 .logoright {
     width: 25%;
     height: auto;
     padding: 3%;
     float: right;
 }
-
-
 .descriptionbox {
     text-align: center;
     position: relative;
-
-
 }
-
-
-
 .descrip-holder {
     position: absolute;
     width: 100%;
     height: 50%;
     margin-top: 10%;
     margin-bottom: 50%;
-
-
 }
-
 .name {
     font-size: 3vw;
     color: #CCFBFE;
     font-weight: initial;
-    font-variant: small-caps;
     border-style: solid;
     border-width: 0 0 0.1rem 0;
     padding: 0 0 1rem 0;
-
 }
-
 .title {
-    font-size: 2vw;
+    font-size: 180%;
     color: #CCFBFE;
-    font-weight: lighter;
-
 }
-
 a:link, a:visited {
     text-decoration: none;
-
 }
-
 .downcontainer {
     margin: auto;
     width: 40%;
 }
-
-
 .downlink {
     padding: 0.8rem;
     border-style: solid;
     color: #CCFBFE;
-
 }
-
 .downlink:hover {
     color: #fff;
     -webkit-transition: 1s;
     transition: 1s;
     background-color: #C979BA;
-
 }
-
 .stickynav {
     width: 100%;
     height: 50px;
@@ -117,115 +84,87 @@ a:link, a:visited {
     position: sticky;
     top: 0;
 }
-
-
 .linkcontainer {
     width: 55%;
     font-weight: lighter;
     margin: auto;
     position: relative;
     top: 35%;
-
 }
-
 .navlink {
     text-decoration: none;
     font-size: 1.3rem;
     margin: 0 3% 0 0;
     color: #CCFBFE;
 }
-
 .navlink:hover {
     color: #fff;
     transition: 1s;
 }
-
-
 .content-container {
     height: 800px;
 }
-
-
 .aboutme {
-    width: 20%;
+    width: 30%;
     float: left;
+    padding-left:30px ;
 }
-
-
 #metitle {
     font-size: 200%;
     padding-bottom: 10%;
 }
-
-
-.portfolio {
-    width: 80%;
-    float: left;
-
+#about-me-content {
+    font-size: 150%;
+    text-align: center;
 }
 
+.portfolio {
+    float: left;
+    width: 70%;
+}
 .aboutme, .portfolio {
     height: 100%;
     background-color: #E5EBFF;
 }
-
-
 .project {
     font-size: 3rem;
     width: 50%;
     margin: 2.5% auto 0 auto;
     text-align: center;
-
 }
-
-
 .boxholder {
     height: 100%;
     width: 900px;
     margin: auto;
     text-align: center;
-
+    padding-top: 30px;
 }
-
-
-
 .picturelink {
-    width: 250px;
-    height: 150px;
+    width: 275px;
+    height: 175px;
     display: inline-block;
     background-color: #F5A7BC;
     margin: 10px 5px 0 5px;
 }
-
-
-
 .picturelink.front-picture {
     display: block;
     position: static;
-
 }
-
 .picturelink.back-picture {
     display: block;
 }
-
-
 .picturelink:hover .front-picture {
     display: none;
 }
-
 .picturelink:hover .back-picture {
     display: block;
     position: static;
 }
-
 .front-picture {
     background-color: #C979BA;
     width: 100%;
     height: 100%;
 }
-
-
 .back-picture {
     height: 100%;
     width: 100%;
@@ -233,39 +172,27 @@ a:link, a:visited {
     position: static;
     display: none;
 }
-
-
 .title-wrapper {
     width: 99%;
     margin: auto;
     text-align: center;
 }
-
 #metitle {
 
 }
-
 #my-photo {
     height: auto;
     width: 100%;
 }
-
-
-
-
 .contactme {
     width: 100%;
-    height: 600px;
-    background-image: linear-gradient( #E5EBFF 10% , #EFB9CB 80%, #EFB9CB 80%)    ;
+    height: 650px;
+    background-image: linear-gradient( #E5EBFF, #B5C7FF, #A1B1E2 )    ;
 }
-
 .contact-me-title {
     text-align: center;
     font-size: 300%;
 }
-
 .contactinfo {
     text-align: center;
 }
-
-
