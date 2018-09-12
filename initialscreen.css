@@ -4,7 +4,10 @@
     font-weight: lighter;
 }
 
-
+body {
+    background-color: #E5EBFF;
+    scroll-behavior: smooth;
+}
 
 .headerbox {
     height: 100vh;
@@ -96,27 +99,16 @@ a:link, a:visited {
     color: #fff;
     -webkit-transition: 1s;
     transition: 1s;
+    background-color: #C979BA;
 
 }
 
 .stickynav {
     width: 100%;
-    height: 40px;
+    height: 50px;
     background-color: #B5C7FF;
     position: sticky;
     top: 0;
-}
-
-.navlink {
-    text-decoration: none;
-    font-size: 1.3rem;
-    margin: 0 2% 0 0;
-    color: #CCFBFE;
-}
-
-.navlink:hover {
-    color: #fff;
-    transition: 1s;
 }
 
 
@@ -125,13 +117,31 @@ a:link, a:visited {
     font-weight: lighter;
     margin: auto;
     position: relative;
-    top: 25%;
+    top: 35%;
+
+}
+
+.navlink {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 0 3% 0 0;
+    color: #CCFBFE;
+}
+
+#portfolio:target  {
 
 }
 
 
 
-.portcontainer {
+
+.navlink:hover {
+    color: #fff;
+    transition: 1s;
+}
+
+
+.content-container {
     height: 150vh;
 }
 
@@ -139,7 +149,7 @@ a:link, a:visited {
 .aboutme {
     width: 20%;
     float: left;
-    background-color: antiquewhite;
+    background-color: #E5EBFF;
 }
 
 .portfolio {
@@ -160,36 +170,79 @@ a:link, a:visited {
 
 }
 
-.picturelink {
-    width: 30%;
-    height: 30%;
-    float: left;
-    margin: 2.5% 0 0 2.5%
-}
-
-.front-picture {
-    background-color: #c282ff;
-    width: 100%;
-    height: 100%;
-}
-
-.front-picture:hover {
-    display: none   ;
-    -webkit-transition: 1s;
-    -moz-transition:  1s;
-    -o-transition:  1s;
-    transition:  56s;
-}
 
 .project {
     font-size: 4vw;
     color: #c282ff;
     font-variant: small-caps;
-    font-weight: lighter;
     width: 50%;
     margin: 2.5% auto 0 auto;
     text-align: center;
 }
+
+.picturelink {
+    width: 30%;
+    height: 30%;
+    float: left;
+    margin: 2.5% 0 0 2.5%;
+    background-color: #F5A7BC;
+}
+
+
+
+.picturelink.front-picture {
+    display: block;
+    position: static;
+
+}
+
+.picturelink.back-picture {
+    display: block;
+}
+
+
+.picturelink:hover .front-picture {
+    display: none;
+}
+
+.picturelink:hover .back-picture {
+    display: block;
+    position: static;
+}
+
+.front-picture {
+    background-color: #C979BA;
+    width: 100%;
+    height: 100%;
+}
+
+
+.back-picture {
+    height: 100%;
+    width: 100%;
+    background-color: #B5C7FF;
+    position: static;
+    display: none;
+}
+
+
+.title-wrapper {
+    width: 99%;
+    margin: auto;
+    text-align: center;
+}
+
+#metitle {
+
+}
+
+#my-photo {
+    height: auto;
+    width: 100%;
+}
+
+
+
 
 .contactme {
     width: 100%;
