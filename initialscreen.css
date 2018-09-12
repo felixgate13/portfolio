@@ -4,9 +4,14 @@
     font-weight: lighter;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #E5EBFF;
-    scroll-behavior: smooth;
+    margin: 0;
+
 }
 
 .headerbox {
@@ -14,6 +19,7 @@ body {
     background-image: url("beautiful-cold-dawn-547115.jpg");
     width: 100%;
     background-size: cover;
+    background-position: center;
 
 
 }
@@ -93,6 +99,7 @@ a:link, a:visited {
     padding: 0.8rem;
     border-style: solid;
     color: #CCFBFE;
+
 }
 
 .downlink:hover {
@@ -128,13 +135,6 @@ a:link, a:visited {
     color: #CCFBFE;
 }
 
-#portfolio:target  {
-
-}
-
-
-
-
 .navlink:hover {
     color: #fff;
     transition: 1s;
@@ -142,15 +142,21 @@ a:link, a:visited {
 
 
 .content-container {
-    height: 150vh;
+    height: 800px;
 }
 
 
 .aboutme {
     width: 20%;
     float: left;
-    background-color: #E5EBFF;
 }
+
+
+#metitle {
+    font-size: 200%;
+    padding-bottom: 10%;
+}
+
 
 .portfolio {
     width: 80%;
@@ -159,33 +165,36 @@ a:link, a:visited {
 }
 
 .aboutme, .portfolio {
-    height: 720px;
+    height: 100%;
+    background-color: #E5EBFF;
+}
+
+
+.project {
+    font-size: 3rem;
+    width: 50%;
+    margin: 2.5% auto 0 auto;
+    text-align: center;
+
 }
 
 
 .boxholder {
     height: 100%;
-    width: 99%;
+    width: 900px;
     margin: auto;
-
-}
-
-
-.project {
-    font-size: 4vw;
-    color: #c282ff;
-    font-variant: small-caps;
-    width: 50%;
-    margin: 2.5% auto 0 auto;
     text-align: center;
+
 }
+
+
 
 .picturelink {
-    width: 30%;
-    height: 30%;
-    float: left;
-    margin: 2.5% 0 0 2.5%;
+    width: 250px;
+    height: 150px;
+    display: inline-block;
     background-color: #F5A7BC;
+    margin: 10px 5px 0 5px;
 }
 
 
@@ -246,11 +255,17 @@ a:link, a:visited {
 
 .contactme {
     width: 100%;
-    height: 720px;
-    background-color: powderblue;
+    height: 600px;
+    background-image: linear-gradient( #E5EBFF 10% , #EFB9CB 80%, #EFB9CB 80%)    ;
 }
 
-.online {
-    height: 200px;
-    background-color: azure;
+.contact-me-title {
+    text-align: center;
+    font-size: 300%;
 }
+
+.contactinfo {
+    text-align: center;
+}
+
+
