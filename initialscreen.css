@@ -64,7 +64,7 @@ a:link, a:visited {
 }
 .downcontainer {
     margin: auto;
-    width: 40%;
+    width: auto;
 }
 .downlink {
     padding: 0.8rem;
@@ -93,7 +93,7 @@ a:link, a:visited {
 }
 .navlink {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 130%;
     margin: 0 3% 0 0;
     color: #CCFBFE;
 }
@@ -127,7 +127,7 @@ a:link, a:visited {
     background-color: #E5EBFF;
 }
 .project {
-    font-size: 3rem;
+    font-size: 300%;
     width: 50%;
     margin: 2.5% auto 0 auto;
     text-align: center;
@@ -197,3 +197,63 @@ a:link, a:visited {
     text-align: center;
 }
 
+
+@media only screen and (max-width: 1200px) {
+
+
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        font-size: 82.6%;
+    }
+    .picturelink {
+        width: 227px;
+        height: 144px;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 64%;
+    }
+    .stickynav {
+        height: 30px;
+    }
+    .picturelink {
+        width: 176px;
+        height: 112px;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    body {
+        font-size: 48%;
+    }
+    .stickynav {
+        height: 20px;
+    }
+    .picturelink {
+        width: 132px;
+        height: 84px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    body {
+        font-size: 26.67%;
+    }
+
+    .stickynav {
+        height: 10px;
+    }
+
+    .picturelink {
+        width: 73.3px;
+        height: 46.7px;
+
+    }
+}
