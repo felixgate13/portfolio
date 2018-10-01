@@ -1,7 +1,4 @@
 <?php
-$db = new PDO('mysql:dbname=portfolio;host=127.0.0.1', 'root');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +13,7 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 <body>
 
 
-<form action="products.php" method="post">
+<form action="db_querys.php" method="post">
     <select name="position">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -30,21 +27,23 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     </select>
     <br>
     picture_image_front
-    <input type="text" name="picture_url" placeholder="picture_url"><br>
+    <input type="text" name="picture_url" value=" <?php echo $start_data_project[0]['picture_url']?>"><br>
 
     picture_text
-    <input type="text" name="picture_text" placeholder="picture_text"><br>
+    <input type="text" name="picture_text" value=" <?php echo $start_data_project[0]['picture_text']?>"><br>
 
     app_link
-    <input type="text" name="app_link" placeholder="app_link"><br>
+    <input type="text" name="app_link" value=" <?php echo $start_data_project[0]['app_link']?>"><br>
 
     code_link
-    <input type="text" name="code_link" placeholder="code_link"><br>
+    <input type="text" name="code_link" value=" <?php echo $start_data_project[0]['code_link']?>"><br>
 
     <input type="submit">
 
 </form>
-
+<a href="dashboard.php">
+    Back
+</a>
 
 </body>
 

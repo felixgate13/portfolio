@@ -34,7 +34,9 @@ $start_data = retrieve_data($db);
     <input type="submit">
 
 </form>
-
+<a href="dashboard.php">
+    Back
+</a>
 
 </body>
 

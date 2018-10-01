@@ -25,12 +25,35 @@ function set_about_me($content, $picture_link, $db, $email, $phone_number)
     }
 }
 
+function set_projects($app_link, $picture_text, $db, $picture_url, $code_link, $drop_down)
+{
+    if (isset($_POST[app_link]) || isset($_POST[picture_text]) || isset($_POST[picture_url]) || isset($_POST[code_link]) || isset($_POST[position])) {
+        $query = $db->prepare('UPDATE `projects` SET picture_link=?, picture_text=?, picture_image_front=?, code_link=? WHERE(`id` = ?);');
+        $query->bindParam(1, $app_link);
+        $query->bindParam(2, $picture_text);
+        $query->bindParam(3, $picture_url);
+        $query->bindParam(4, $code_link);
+        $query->bindParam(5, $drop_down);
+        $query->execute();
+        header('Location: products.php');
+    }
+}
+
+
+
+
+$app_link = $_POST[app_link];
+$picture_text = $_POST[picture_text];
+$picture_url = $_POST[picture_url];
+$code_link = $_POST[code_link];
+$drop_down = $_POST[position];
+
 $content = $_POST[content];
 $phone_number = $_POST[phone_number];
 $email = $_POST[email];
 $picture_link = $_POST[picture_link];
 
 set_about_me($content, $picture_link, $db, $email, $phone_number);
-
+set_projects($app_link, $picture_text, $db, $picture_url, $code_link, $drop_down);
 
 ?>
