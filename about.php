@@ -1,3 +1,18 @@
+<?php
+$db = new PDO('mysql:dbname=portfolio;host=127.0.0.1', 'root');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+$query = $db->prepare('UPDATE `about_me` SET content=?, picture_link=? WHERE(`id` = 2);');
+$content = $_POST[content];
+$picture_link = $_POST[picture_link];
+$query->bindParam(1,$content);
+$query->bindParam(2,$picture_link);
+$query->execute();
+function set_about_me($content, $picture_link){
+
+
+
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -11,11 +26,13 @@
 <body>
 
 
-<form action="login.php" method="post">
+<form action="about.php" method="post">
 
-    <input type="text" name="username" placeholder="Username">
+    About_me_content
+    <input type="text" name="content" placeholder="content"> <br>
 
-    <input type="text" name="password" placeholder="Password">
+    picture_link
+    <input type="text" name="picture_link" placeholder="picture_link">
 
     <br>
 

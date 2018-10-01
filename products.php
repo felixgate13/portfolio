@@ -1,4 +1,7 @@
 <?php
+$db = new PDO('mysql:dbname=portfolio;host=127.0.0.1', 'root');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +16,7 @@
 <body>
 
 
-<form action="login.php" method="post">
+<form action="products.php" method="post">
     <select name="position">
         <option value="1">1</option>
         <option value="2">2</option>
