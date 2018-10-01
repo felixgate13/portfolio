@@ -1,17 +1,6 @@
 <?php
-$db = new PDO('mysql:dbname=portfolio;host=127.0.0.1', 'root');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$query = $db->prepare('UPDATE `about_me` SET content=?, picture_link=? WHERE(`id` = 2);');
-$content = $_POST[content];
-$picture_link = $_POST[picture_link];
-$query->bindParam(1,$content);
-$query->bindParam(2,$picture_link);
-$query->execute();
-function set_about_me($content, $picture_link){
-
-
-
-}
+require 'db_querys.php';
+$start_data = retrieve_data($db);
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,13 +15,19 @@ function set_about_me($content, $picture_link){
 <body>
 
 
-<form action="about.php" method="post">
+<form action="db_querys.php" method="post">
 
-    About_me_content
-    <input type="text" name="content" placeholder="content"> <br>
+    About me content
+    <input type="text" name="content"  value="<?php echo $start_data[0]['content']?>"> <br>
 
-    picture_link
-    <input type="text" name="picture_link" placeholder="picture_link">
+    Phone number
+    <input type="text" name="phone_number"  value="<?php echo $start_data[0]['phone_number']?>">  <br>
+
+    Email
+    <input type="text" name="email" value="<?php echo $start_data[0]['email']?>" ><br>
+
+    Picture link
+    <input type="text" name="picture_link" value="<?php echo $start_data[0]['picture_link']?>">
 
     <br>
 

@@ -1,4 +1,6 @@
 <?php
+require 'db_querys.php';
+$start_data = retrieve_data($db);
 
 ?>
 <!DOCTYPE html>
@@ -70,7 +72,9 @@
         <div id="my-photo">
         </div>
         <p id="about-me-content">
-            My name is Felix Gate and i am training as a full-stack web developer at Mayden Academy, Bath. As well as being qualified as a Scrum Master, my web development skills include HTML and CSS and will include Javascript, PHP, Node.js, MySQL and more.  My interests mostly lie in trying to find new things to be interested about however, climbing has become a little obsession of mine and music is just great. Work the body and the mind people.
+            <?php
+            echo $start_data[0]['content']
+            ?>
         </p>
     </section>
     <!--PORTFOLIO CONTENT-->
@@ -143,10 +147,14 @@
     </h2>
     <footer class="contactinfo">
         <p>
-            felixgate13@gmail.com
+            <?php
+            echo $start_data[0]['email']
+            ?>
         </p>
         <p>
-            07511623572
+            <?php
+            echo $start_data[0]['phone_number']
+            ?>
         </p>
         <p>
             https://github.com/felixgate13
