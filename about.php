@@ -31,7 +31,7 @@ $start_data = retrieve_data($db);
 
     <br>
 
-    <input type="submit">
+    <input type="submit" name="submit_about">
 
 </form>
 <a href="dashboard.php">

@@ -1,5 +1,10 @@
 <?php
+require 'db_querys_products.php';
+$start_data_project = retrieve_data_project($db, $_GET[position]);
+print_r($_GET[position]);
+
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,32 +18,22 @@
 <body>
 
 
-<form action="db_querys.php" method="post">
-    <select name="position">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-    </select>
+<form method="post" action="db_querys_products.php">
+
     <br>
     picture_image_front
-    <input type="text" name="picture_url" value=" <?php echo $start_data_project[0]['picture_url']?>"><br>
+    <input type="text" name="picture_image_front" value=" <?php echo $start_data_project[0]['picture_image_front']?>"><br>
 
     picture_text
     <input type="text" name="picture_text" value=" <?php echo $start_data_project[0]['picture_text']?>"><br>
 
-    app_link
-    <input type="text" name="app_link" value=" <?php echo $start_data_project[0]['app_link']?>"><br>
+    picture_link
+    <input type="text" name="picture_link" value=" <?php echo $start_data_project[0]['picture_link']?>"><br>
 
     code_link
     <input type="text" name="code_link" value=" <?php echo $start_data_project[0]['code_link']?>"><br>
 
-    <input type="submit">
+    <input type="submit" name="submit_project">
 
 </form>
 <a href="dashboard.php">
