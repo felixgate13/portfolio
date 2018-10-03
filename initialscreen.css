@@ -658,3 +658,10 @@ a:link, a:visited {
 
 }
 
+.login_box{
+    width: 600px;
+    overflow: auto;
+    margin: auto;
+    padding: 10%;
+
+}

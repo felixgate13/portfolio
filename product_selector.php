@@ -1,16 +1,9 @@
-
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <title> About Page </title>
-
 </head>
-
-
 <body>
-
 <form action="products.php" method="GET" >
     <select name="position">
         <option value="1">1</option>

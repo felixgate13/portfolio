@@ -2,9 +2,12 @@
 require 'dbConn.php';
 
 // checking that the key exists withing the array
-function check_array($key, $array){
+function check_array($key, array $array){
     if (array_key_exists($key, $array)){
         return $array[$key];
+    }
+    else {
+        return "unexpected error -- array key does not exist";
     }
 }
 
@@ -26,7 +29,7 @@ function set_projects($picture_link, $picture_text, $db, $picture_url, $code_lin
            $query->bindParam(5, $selector);
            $query->execute();
            $row_count = $query->rowCount();
-           print("Replaced $row_count row(s). \n");
+           return "Replaced $row_count row(s). \n";
 
 }
 
@@ -36,19 +39,11 @@ set_projects($picture_link, $picture_text, $db, $picture_image_front, $code_link
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <title> About Page </title>
-
 </head>
-
-
 <body>
-<a href="dashboard.php">
-    Back
-</a>
-
+<a href="dashboard.php">Back</a>
 </body>
 </html>
 

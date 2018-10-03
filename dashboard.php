@@ -8,13 +8,8 @@
 </head>
 <body>
     <div>
-        <a href="product_selector.php">
-            PROJECTS <br>
-        </a>
-        <a href="about.php">
-            ABOUT
-        </a>
-
+        <a href="product_selector.php">PROJECTS</a> <br>
+        <a href="about.php">ABOUT</a>
     </div>
 </body>
 </html>
