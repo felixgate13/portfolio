@@ -1,19 +1,22 @@
 <?php
-require 'db_querys.php';
+require 'dbConn.php';
+function retrieve_data($db)
+{
+    $retrieve_statement = $db->prepare('SELECT `content`, `picture_link`, `phone_number`, `email` FROM `about_me` WHERE `id` = 1;');
+    $retrieve_statement->execute();
+    $start_data = $retrieve_statement->fetchAll();
+    return $start_data;
+}
 $start_data = retrieve_data($db);
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
 
     <title> About Page </title>
 
 </head>
-
-
 <body>
-
 
 <form action="db_querys.php" method="post">
 
@@ -21,7 +24,7 @@ $start_data = retrieve_data($db);
     <input type="text" name="content"  value="<?php echo $start_data[0]['content']?>"> <br>
 
     Phone number
-    <input type="text" name="phone_number"  value="<?php echo $start_data[0]['phone_number']?>">  <br>
+    <input type="tel" name="phone_number"  value="<?php echo $start_data[0]['phone_number']?>">  <br>
 
     Email
     <input type="text" name="email" value="<?php echo $start_data[0]['email']?>" ><br>
