@@ -1,14 +1,20 @@
 <?php
-require 'db_querys_products.php';
-$start_data_project = retrieve_data_project($db, $_GET[position]);
-print_r($_GET[position]);
+require 'dbConn.php';
+function retrieve_data_project($db, $selector)
+{
 
+    $retrieve_statement = $db->prepare('SELECT `picture_link`, `picture_text`, `picture_image_front`, `code_link` FROM `projects` WHERE `id` = ?;');
+    $retrieve_statement->bindParam(1, $selector);
+    $retrieve_statement->execute();
+    $data = $retrieve_statement->fetchAll();
+    return $data;
+}
+$start_data_project = retrieve_data_project($db, $_GET['position']);
+$id = $_GET['position'];
 ?>
 
 <!DOCTYPE html>
 <html>
-
-<head>
 
     <title> Project Page </title>
 
@@ -18,7 +24,7 @@ print_r($_GET[position]);
 <body>
 
 
-<form method="post" action="db_querys_products.php">
+<form method="post" action="db_querys_products.php" >
 
     <br>
     picture_image_front
@@ -33,7 +39,8 @@ print_r($_GET[position]);
     code_link
     <input type="text" name="code_link" value=" <?php echo $start_data_project[0]['code_link']?>"><br>
 
-    <input type="submit" name="submit_project">
+    <input type="hidden" name="position" value="<?php echo $id; ?>">
+    <input type="submit" >
 
 </form>
 <a href="dashboard.php">
