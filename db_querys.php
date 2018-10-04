@@ -26,7 +26,8 @@ $phone_number = check_array('phone_number', $_POST);
 $email = check_array('email', $_POST);
 $picture_link = check_array('picture_link', $_POST);
 
-set_about_me($content, $picture_link, $db, $email, $phone_number);
+echo set_about_me($content, $picture_link, $db, $email, $phone_number);
+
 ?>
 <!DOCTYPE html>
 <html>

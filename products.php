@@ -13,6 +13,7 @@ $id = $_GET['position'];
 ?>
 <!DOCTYPE html>
 <html>
+<head>
     <title> Project Page </title>
 </head>
 <body>
