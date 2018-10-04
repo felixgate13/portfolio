@@ -1,0 +1,688 @@
+/*NORMALIZE*/
+
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+    margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+    background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+    border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+    overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+    text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+    overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+    display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+    display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+    display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/*END OF NORMALIZE*/
+
+
+
+* {
+    Box-sizing:  border-box;
+    font-family:'Raleway', sans-serif;
+    font-weight: lighter;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #E5EBFF;
+    margin: 0;
+}
+.headerbox {
+    height: 100vh;
+    background-image: url("beautiful-cold-dawn-547115.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.applicationimages1, .applicationimages2, .descriptionbox {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    margin: auto;
+}
+.logoleft {
+    width: 23%;
+    height: auto;
+    padding: 3%;
+    float: left;
+}
+.logoright {
+    width: 25%;
+    height: auto;
+    padding: 3%;
+    float: right;
+}
+.descriptionbox {
+    text-align: center;
+    position: relative;
+}
+.descrip-holder {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    margin-top: 10%;
+    margin-bottom: 50%;
+}
+.name {
+    font-size: 250%;
+    color: #CCFBFE;
+    font-weight: initial;
+    border-style: solid;
+    border-width: 0 0 3px 0;
+    padding: 0 0 5% 0;
+}
+.title {
+    font-size: 180%;
+    color: #CCFBFE;
+}
+a:link, a:visited {
+    text-decoration: none;
+}
+.downcontainer {
+    margin: auto;
+    width: auto;
+}
+.downlink {
+    padding: 3%;
+    border-style: solid;
+    color: #CCFBFE;
+}
+.downlink:hover {
+    color: #fff;
+    -webkit-transition: 1s;
+    transition: 1s;
+    background-color: #C979BA;
+}
+.stickynav {
+    width: 100%;
+    height: 50px;
+    background-color: #B5C7FF;
+    position: fixed;
+    position: sticky;
+    right: 0;
+    top: 0;
+}
+.linkcontainer {
+    width: 55%;
+    font-weight: lighter;
+    margin: auto;
+    position: relative;
+    top: 35%;
+}
+.navlink {
+    text-decoration: none;
+    font-size: 130%;
+    margin: 0 3% 0 0;
+    color: #CCFBFE;
+}
+.navlink:hover {
+    color: #fff;
+    transition: 1s;
+}
+.content-container:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.aboutme {
+    width: 30%;
+    float: left;
+    padding-left: 30px;
+    margin-top: 3.5%;
+    height: 100%;
+
+}
+#metitle {
+    font-size: 200%;
+    padding-bottom: 7%;
+}
+#about-me-content {
+    font-size: 150%;
+    text-align: center;
+    background-color: #E5EBFF;
+}
+
+.portfolio {
+    float: left;
+    width: 70%;
+}
+.aboutme, .portfolio {
+    height: 100%;
+    background-color: #E5EBFF;
+}
+.project {
+    font-size: 300%;
+    width: 50%;
+    margin: 7.5% auto 0 auto;
+    text-align: center;
+}
+.boxholder {
+    overflow: auto;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.picturelink {
+    width: 275px;
+    height: 175px;
+    display: inline-block;
+    background-color: #F5A7BC;
+    margin: 10px 5px 0 5px;
+}
+.picturelink.front-picture {
+    display: block;
+    position: static;
+}
+.picturelink.back-picture {
+    display: block;
+}
+.picturelink:hover .front-picture {
+    display: none;
+}
+.picturelink:hover .back-picture {
+    display: block;
+    position: static;
+}
+.front-picture {
+    background-color: #C979BA;
+    width: 100%;
+    height: 100%;
+}
+.back-picture {
+    height: 100%;
+    width: 100%;
+    background-color: #B5C7FF;
+    position: relative;
+    display: none;
+}
+.title-wrapper {
+    width: 99%;
+    margin: auto;
+    text-align: center;
+}
+#my-photo-holder {
+    width: 50%;
+    height:200px;
+    margin: auto;
+}
+#my-photo {
+    height: 100%;
+    width: 100%;
+}
+
+.contactme {
+    width: 100%;
+    height: 650px;
+    background-image: linear-gradient( #E5EBFF, #B5C7FF, #A1B1E2 )    ;
+    margin-top: 200px;
+}
+.contact-me-title {
+    text-align: center;
+    font-size: 300%;
+}
+.contactinfo {
+    text-align: center;
+}
+
+/* @MEDIA FUNCTIONS */
+
+@media only screen and (max-width: 1386px) {
+    #byeblock {
+        visibility: hidden;
+    }
+}
+@media only screen and (max-width: 992px) {
+    body {
+        font-size: 82.6%;
+    }
+    .picturelink {
+        width: 220px;
+        height: 144px;
+    }
+    .contactme {
+        margin-top: 140px;
+        padding-top: 30px;
+    }
+    #byeblock {
+        visibility: hidden;
+    }
+    .content-container {
+        height: 82.6%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 64%;
+    }
+    .stickynav {
+        height: 30px;
+    }
+    .picturelink {
+        width: 166px;
+        height: 102px;
+    }
+    #about-me-content {
+        padding: 5% 10% 0 10%;
+    }
+
+    .aboutme {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 0 5px 0 5px;
+        height: 50%;
+    }
+    .portfolio {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+    }
+    #byeblock {
+        visibility: visible;
+    }
+    #my-photo {
+        width: 50%;
+    }
+    #metitle {
+        padding-top: 20px;
+        padding-bottom: 5%;
+    }
+
+}
+@media only screen and (max-width: 610px) {
+    body {
+        font-size: 52%;
+    }
+    .stickynav {
+        height: 20px;
+    }
+    .picturelink {
+        width: 130px;
+        height: 84px;
+    }
+    .aboutme {
+        display: block;
+        float: none;
+    }
+    .portfolio {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+
+}
+@media only screen and (max-width: 320px) {
+    body {
+        font-size: 26.67%;
+    }
+    .stickynav {
+        height: 10px;
+    }
+    .picturelink {
+        width: 73.3px;
+        height: 46.7px;
+    }
+
+
+}
+
+.login_box {
+    width: 600px;
+    overflow: auto;
+    margin: auto;
+    padding: 10%;
+
+}
+.port_img {
+    width: 100%;
+    height: 100%;
+}
+
+.app-link {
+    float: left;
+    width: 50%;
+    padding-top: 50%;
+    padding-right: 7%;
+}
+
+.code-link {
+    float: left;
+    width: 50%;
+    padding-top: 50%;
+    padding-left: 7%;
+
+}
