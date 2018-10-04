@@ -10,6 +10,25 @@ function retrieve_data($db)
 
 $start_data = retrieve_data($db);
 
+function retrieve_data_project($db, $selector) {
+
+    $retrieve_statement = $db->prepare('SELECT `picture_link`, `picture_text`, `picture_image_front`, `code_link` FROM `projects` WHERE `id` = ?;');
+    $retrieve_statement->bindParam(1, $selector);
+    $retrieve_statement->execute();
+    $data = $retrieve_statement->fetch();
+    return $data;
+}
+$picture_data1 = retrieve_data_project($db, 1);
+$picture_data2 = retrieve_data_project($db, 2);
+$picture_data3 = retrieve_data_project($db, 3);
+$picture_data4 = retrieve_data_project($db, 4);
+$picture_data5 = retrieve_data_project($db, 5);
+$picture_data6 = retrieve_data_project($db, 6);
+$picture_data7 = retrieve_data_project($db, 7);
+$picture_data8 = retrieve_data_project($db, 8);
+$picture_data9 = retrieve_data_project($db, 9);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +96,8 @@ $start_data = retrieve_data($db);
                 About me
             </h2>
        </div>
-        <div id="my-photo">
+        <div id="my-photo-holder">
+            <img src="<?php echo $start_data['picture_link'] ?>" >
         </div>
         <p id="about-me-content">
             <?php
@@ -85,66 +105,129 @@ $start_data = retrieve_data($db);
             ?>
         </p>
     </section>
-    <!--PORTFOLIO CONTENT-->
+    <!--PORTFOLIO CONTENT    THIS IS WHERE THE PICTURE DATA WILL GO NEED TO BUILD HTML FOR THIS   -->
     <div id="project"></div>
     <section class="portfolio"  >
         <h2 class="project" > Projects </h2>
         <div class="boxholder">
             <div class="picturelink">
                 <div class="front-picture">
-                 </div>
-                 <div class="back-picture">
-                 </div>
-             </div>
-            <div class="picturelink">
-                <div class="front-picture">
+                    <img src="<?php echo $picture_data1['picture_image_front']?>" class="port_img">
                 </div>
                 <div class="back-picture">
-                </div>
-            </div>
-            <div class="picturelink">
-                <div class="front-picture">
-                </div>
-                <div class="back-picture">
+                    <div class="code-link">
+                        <a href="<?php echo $picture_data1['code_link'] ?>"> Code Link </a>
+                    </div>
+                    <div class="app-link">
+                        <a href="<?php echo $picture_data1['picture_link'] ?>"> App Link </a>
+                    </div>
                 </div>
             </div>
             <div class="picturelink">
                 <div class="front-picture">
+                <img src="<?php echo $picture_data2['picture_image_front']?>" class="port_img">
                 </div>
                 <div class="back-picture">
-                </div>
+                    <div class="code-link">
+                        <a href="<?php echo $picture_data2['code_link'] ?>"> Link </a>
+                    </div>
+                    <div class="app-link">
+                        <a href="<?php echo $picture_data2['picture_link'] ?>"> App Link </a>
+                    </div>
+            </div>
             </div>
             <div class="picturelink">
                 <div class="front-picture">
+                <img src="<?php echo $picture_data3['picture_image_front']?>" class="port_img">
                 </div>
                 <div class="back-picture">
-                </div>
+                    <div class="code-link">
+                        <a href="<?php echo $picture_data3['code_link'] ?>"> Code Link  </a>
+                    </div>
+                    <div class="app-link">
+                        <a href="<?php echo $picture_data3['picture_link'] ?>"> App Link  </a>
+                    </div>
+            </div>
             </div>
             <div class="picturelink">
                 <div class="front-picture">
+                <img src="<?php echo $picture_data4['picture_image_front']?>" class="port_img">
                 </div>
                 <div class="back-picture">
-                </div>
+                    <div class="code-link">
+                        <a href="<?php echo $picture_data4['code_link'] ?>"> Code Link </a>
+                    </div>
+                    <div class="app-link">
+                        <a href="<?php echo $picture_data4['picture_link'] ?>"> App Link </a>
+                    </div>
+            </div>
             </div>
             <div class="picturelink">
                 <div class="front-picture">
+                <img src="<?php echo $picture_data5['picture_image_front']?>" class="port_img">
                 </div>
                 <div class="back-picture">
-                </div>
+                    <div class="code-link">
+                        <a href="<?php echo $picture_data5['code_link'] ?>"> Code Link </a>
+                    </div>
+                    <div class="app-link">
+                        <a href="<?php echo $picture_data5['picture_link'] ?>"> App Link </a>
+                    </div>
+            </div>
             </div>
             <div class="picturelink">
                 <div class="front-picture">
+                <img src="<?php echo $picture_data6['picture_image_front']?>" class="port_img">
                 </div>
                 <div class="back-picture">
-                </div>
+                    <div class="code-link">
+                        <a href="<?php echo $picture_data6['code_link'] ?>"> Code Link </a>
+                    </div>
+                    <div class="app-link">
+                        <a href="<?php echo $picture_data6['picture_link'] ?>"> App Link </a>
+                    </div>
             </div>
-            <div class="picturelink" id="byeblock">
+            </div>
+            <div class="picturelink">
                 <div class="front-picture">
+                <img src="<?php echo $picture_data7['picture_image_front']?>" class="port_img">
                 </div>
                 <div class="back-picture">
+                    <div class="code-link">
+                        <a href="<?php echo $picture_data7['code_link'] ?>"> Code Link </a>
+                    </div>
+                    <div class="app-link">
+                        <a href="<?php echo $picture_data7['picture_link'] ?>"> App Link </a>
+                    </div>
+            </div>
+            </div>
+            <div class="picturelink">
+                <div class="front-picture">
+                <img src="<?php echo $picture_data8['picture_image_front']?>" class="port_img">
                 </div>
+                <div class="back-picture">
+                    <div class="code-link">
+                        <a href="<?php echo $picture_data8['code_link'] ?>"> Code Link </a>
+                    </div>
+                    <div class="app-link">
+                        <a href="<?php echo $picture_data8['picture_link'] ?>"> App Link </a>
+                    </div>
             </div>
             </div>
+            <div class="picturelink">
+                <div class="front-picture">
+                    <img src="<?php echo $picture_data9['picture_image_front']?>" class="port_img">
+                </div>
+                <div class="back-picture">
+                    <div class="code-link">
+                        <a href="<?php echo $picture_data9['code_link'] ?>"> Code Link </a>
+                    </div>
+                    <div class="app-link">
+                        <a href="<?php echo $picture_data9['picture_link'] ?>"> App Link </a>
+                    </div>
+            </div>
+            </div>
+        </div>
     </section>
 </div>
 <!--CONTACT INFO-->

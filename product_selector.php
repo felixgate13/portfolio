@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 'loggedIn') {
+    header('Location: login.php');
+}
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>

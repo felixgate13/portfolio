@@ -1,7 +1,12 @@
 <?php
 require 'dbConn.php';
+session_start();
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 'loggedIn') {
+    header('Location: login.php');
+}
 
-// checking that the key exists withing the array
+
+// checking that the key exists within the array
 function check_array($key, array $array) {
     if (array_key_exists($key, $array)){
         return $array[$key];
@@ -11,7 +16,7 @@ function check_array($key, array $array) {
     }
 }
 
-$picture_link = check_array('picture_link', $_POST);
+$picture_link =  check_array('picture_link', $_POST);
 $picture_text = check_array('picture_text', $_POST);
 $picture_image_front = check_array('picture_image_front', $_POST);
 $code_link = check_array('code_link', $_POST);
@@ -33,7 +38,7 @@ function set_projects($picture_link, $picture_text, $db, $picture_url, $code_lin
 }
 
 $position = $_POST['position'];
-set_projects($picture_link, $picture_text, $db, $picture_image_front, $code_link, $position);
+echo set_projects($picture_link, $picture_text, $db, $picture_image_front, $code_link, $position);
 
 ?>
 <!DOCTYPE html>

@@ -1,5 +1,10 @@
 <?php
 require 'dbConn.php';
+session_start();
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 'loggedIn') {
+    header('Location: login.php');
+}
+
 function retrieve_data($db) {
     $retrieve_statement = $db->query('SELECT `content`, `picture_link`, `phone_number`, `email` FROM `about_me` WHERE `id` = 1;');
     $start_data = $retrieve_statement->fetch();

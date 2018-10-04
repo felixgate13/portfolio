@@ -1,5 +1,10 @@
 <?php
 require 'dbConn.php';
+session_start();
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 'loggedIn') {
+    header('Location: login.php');
+}
+
 //setting the data into the  about me page
 function set_about_me($content, $picture_link, $db, $email, $phone_number) {
         $query = $db->prepare('UPDATE `about_me` SET content=?, picture_link=?, phone_number=?, email=? WHERE `id` = 1;');
