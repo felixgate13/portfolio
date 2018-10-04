@@ -4,7 +4,7 @@ function retrieve_data($db)
 {
     $retrieve_statement = $db->prepare('SELECT `content`, `picture_link`, `phone_number`, `email` FROM `about_me` WHERE `id` = 1;');
     $retrieve_statement->execute();
-    $start_data = $retrieve_statement->fetchAll();
+    $start_data = $retrieve_statement->fetch();
     return $start_data;
 }
 
@@ -81,7 +81,7 @@ $start_data = retrieve_data($db);
         </div>
         <p id="about-me-content">
             <?php
-            echo $start_data[0]['content']
+            echo $start_data['content']
             ?>
         </p>
     </section>
@@ -156,12 +156,12 @@ $start_data = retrieve_data($db);
     <footer class="contactinfo">
         <p>
             <?php
-            echo $start_data[0]['email']
+            echo $start_data['email']
             ?>
         </p>
         <p>
             <?php
-            echo $start_data[0]['phone_number']
+            echo $start_data['phone_number']
             ?>
         </p>
         <p>

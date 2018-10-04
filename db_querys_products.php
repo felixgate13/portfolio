@@ -2,7 +2,7 @@
 require 'dbConn.php';
 
 // checking that the key exists withing the array
-function check_array($key, array $array){
+function check_array($key, array $array) {
     if (array_key_exists($key, $array)){
         return $array[$key];
     }
@@ -19,8 +19,7 @@ $code_link = check_array('code_link', $_POST);
 
 
 // setting projects
-function set_projects($picture_link, $picture_text, $db, $picture_url, $code_link, $selector)
-{
+function set_projects($picture_link, $picture_text, $db, $picture_url, $code_link, $selector) {
            $query = $db->prepare('UPDATE `projects` SET picture_link=?, picture_text=?, picture_image_front=?, code_link=? WHERE `id` = ?;');
            $query->bindParam(1, $picture_link);
            $query->bindParam(2, $picture_text);
