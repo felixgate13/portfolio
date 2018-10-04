@@ -5,14 +5,10 @@ if (isset($_POST[submit])){
         header('Location: dashboard.php');
 
     }
-
 }
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-
-
-
 
 ?>
 <!DOCTYPE html>
@@ -30,9 +26,7 @@ $password = $_POST['password'];
             Password
             <input type="password" placeholder="Password" name="password">
            <input type="submit" placeholder="Login" name="submit">
-
        </form>
-
     </div>
     </body>
 </html>
